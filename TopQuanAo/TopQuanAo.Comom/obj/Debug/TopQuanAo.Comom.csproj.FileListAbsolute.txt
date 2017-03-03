@@ -1,0 +1,5 @@
+D:\ASP.NET\TopQuanAo\TopQuanAo.Comom\obj\Debug\TopQuanAo.Comom.csprojResolveAssemblyReference.cache
+D:\ASP.NET\TopQuanAo\TopQuanAo.Comom\bin\Debug\TopQuanAo.Comom.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Comom\bin\Debug\TopQuanAo.Comom.pdb
+D:\ASP.NET\TopQuanAo\TopQuanAo.Comom\obj\Debug\TopQuanAo.Comom.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Comom\obj\Debug\TopQuanAo.Comom.pdb

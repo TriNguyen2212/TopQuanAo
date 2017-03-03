@@ -1,0 +1,40 @@
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\TopQuanAo.Service.dll.config
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\TopQuanAo.Service.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\TopQuanAo.Service.pdb
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\EntityFramework.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\TopQuanAo.Comom.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\TopQuanAo.Data.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\TopQuanAo.Model.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\TopQuanAo.Comom.pdb
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\TopQuanAo.Data.pdb
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\TopQuanAo.Model.pdb
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\EntityFramework.xml
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\obj\Debug\TopQuanAo.Service.csprojResolveAssemblyReference.cache
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\obj\Debug\TopQuanAo.Service.dll
+D:\ASP.NET\TopQuanAo\TopQuanAo.Service\obj\Debug\TopQuanAo.Service.pdb
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\TopQuanAo.Service.dll.config
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\TopQuanAo.Service.dll
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\TopQuanAo.Service.pdb
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\EntityFramework.dll
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\EntityFramework.SqlServer.dll
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\TopQuanAo.Comom.dll
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\TopQuanAo.Data.dll
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\TopQuanAo.Model.dll
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\TopQuanAo.Comom.pdb
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\TopQuanAo.Data.pdb
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\TopQuanAo.Model.pdb
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\EntityFramework.xml
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\EntityFramework.SqlServer.xml
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\obj\Debug\TopQuanAo.Service.csprojResolveAssemblyReference.cache
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\obj\Debug\TopQuanAo.Service.dll
+D:\ASP.NET\TopQuanAo - Copy\TopQuanAo.Service\obj\Debug\TopQuanAo.Service.pdb

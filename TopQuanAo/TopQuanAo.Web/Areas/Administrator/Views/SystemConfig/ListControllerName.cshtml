@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Danh sách controller";
+}
+@using System
+@using System.Collections.Generic;
+@using TopQuanAo.Web.Areas.Administrator.Controllers
+@using System.Reflection
+@model List<Type>
+<h2>Danh sách controller</h2>
+<ul>
+    @{
+        ReflectionController reflectionController = new ReflectionController();
+        foreach (Type type in Model)
+        {
+            List<MemberInfo> listMember = reflectionController.GetActions(type);
+            <li>
+                @type.Name
+            <ul>
+                @foreach (MemberInfo memberInfo in listMember)
+                {
+                    <li>@memberInfo.Name</li>
+                }
+            </ul>
+        </li>
+        }
+    }
+</ul>

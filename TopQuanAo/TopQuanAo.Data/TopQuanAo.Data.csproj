@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7511D7F0-07F6-408B-BF56-10FA192FE885}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TopQuanAo.Data</RootNamespace>
+    <AssemblyName>TopQuanAo.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201702261903154_addIdentity.cs" />
+    <Compile Include="Migrations\201702261903154_addIdentity.Designer.cs">
+      <DependentUpon>201702261903154_addIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702261919215_dbchange.cs" />
+    <Compile Include="Migrations\201702261919215_dbchange.Designer.cs">
+      <DependentUpon>201702261919215_dbchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702281734529_add-modelsBase.cs" />
+    <Compile Include="Migrations\201702281734529_add-modelsBase.Designer.cs">
+      <DependentUpon>201702281734529_add-modelsBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reponsitories\ApplicationGroupRepository.cs" />
+    <Compile Include="Reponsitories\ApplicationRoleGroupRepository.cs" />
+    <Compile Include="Reponsitories\ApplicationRoleRepository.cs" />
+    <Compile Include="Reponsitories\ApplicationUserGroupRepository.cs" />
+    <Compile Include="Reponsitories\ContactDetailRepository.cs" />
+    <Compile Include="Reponsitories\ErrorRepository.cs" />
+    <Compile Include="Reponsitories\FeedbackRepository.cs" />
+    <Compile Include="Reponsitories\FooterRepository.cs" />
+    <Compile Include="Reponsitories\MenuGroupRepository.cs" />
+    <Compile Include="Reponsitories\MenuRepository.cs" />
+    <Compile Include="Reponsitories\OrderDetailRepository.cs" />
+    <Compile Include="Reponsitories\OrderRepository.cs" />
+    <Compile Include="Reponsitories\PageRepository.cs" />
+    <Compile Include="Reponsitories\PostCategoryRepository.cs" />
+    <Compile Include="Reponsitories\PostRepository.cs" />
+    <Compile Include="Reponsitories\PostTagRepository.cs" />
+    <Compile Include="Reponsitories\ProductCategoryRepository.cs" />
+    <Compile Include="Reponsitories\ProductRepository.cs" />
+    <Compile Include="Reponsitories\ProductResository.cs" />
+    <Compile Include="Reponsitories\ProductTagRepository.cs" />
+    <Compile Include="Reponsitories\SlideRepository.cs" />
+    <Compile Include="Reponsitories\SupportOnlineRepository.cs" />
+    <Compile Include="Reponsitories\SystemConfigRepository.cs" />
+    <Compile Include="Reponsitories\TagRepository.cs" />
+    <Compile Include="Reponsitories\VisitorStatisticRepository.cs" />
+    <Compile Include="TopQuanAoDbContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TopQuanAo.Model\TopQuanAo.Model.csproj">
+      <Project>{9a12f87d-715e-414a-8475-2cba56898be2}</Project>
+      <Name>TopQuanAo.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201702261903154_addIdentity.resx">
+      <DependentUpon>201702261903154_addIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702261919215_dbchange.resx">
+      <DependentUpon>201702261919215_dbchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702281734529_add-modelsBase.resx">
+      <DependentUpon>201702281734529_add-modelsBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

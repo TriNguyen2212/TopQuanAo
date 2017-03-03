@@ -1,0 +1,11 @@
+﻿#show-waiting {
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: progress;
+    background: rgba(122,122,122,.4) url('ajax-loader.gif') 50% 50% no-repeat;
+}
