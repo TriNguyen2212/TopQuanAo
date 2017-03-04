@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Danh mục sản phẩm";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<div id="wrap-content">
+    <table id="jqGrid"></table>
+    <div id="jqGridPager"></div>
+</div>
+
+@section    footerJS{
+    <link href="~/Areas/Administrator/assets/global/plugins/jqgrid/ui.jqgrid-bootstrap.css" rel="stylesheet" />
+    <script src="~/Areas/Administrator/assets/global/plugins/jqgrid/jquery.jqGrid.min.js"></script>
+    <script src="~/Areas/Administrator/assets/global/plugins/jqgrid/grid.locale-en.js"></script>
+    <script src="~/Areas/Administrator/ScriptPage/ProductCategory.js"></script>
+}

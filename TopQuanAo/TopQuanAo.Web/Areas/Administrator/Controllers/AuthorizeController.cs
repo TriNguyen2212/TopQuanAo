@@ -15,7 +15,7 @@ namespace TopQuanAo.Web.Areas.Administrator.Controllers
             string actionName = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName + "-" + filterContext.ActionDescriptor.ActionName;
             if (!listPermission.Contains(actionName))
             {
-                filterContext.Result = new RedirectResult("~/Administrator/Home/NotPermission");
+                //filterContext.Result = new RedirectResult("~/Administrator/Home/NotPermission");
             }
         }
     }

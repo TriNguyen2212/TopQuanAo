@@ -64,17 +64,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201702261903154_addIdentity.cs" />
-    <Compile Include="Migrations\201702261903154_addIdentity.Designer.cs">
-      <DependentUpon>201702261903154_addIdentity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702261919215_dbchange.cs" />
-    <Compile Include="Migrations\201702261919215_dbchange.Designer.cs">
-      <DependentUpon>201702261919215_dbchange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201702281734529_add-modelsBase.cs" />
-    <Compile Include="Migrations\201702281734529_add-modelsBase.Designer.cs">
-      <DependentUpon>201702281734529_add-modelsBase.cs</DependentUpon>
+    <Compile Include="Migrations\201703041323235_initDB.cs" />
+    <Compile Include="Migrations\201703041323235_initDB.Designer.cs">
+      <DependentUpon>201703041323235_initDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,14 +108,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702261903154_addIdentity.resx">
-      <DependentUpon>201702261903154_addIdentity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702261919215_dbchange.resx">
-      <DependentUpon>201702261919215_dbchange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702281734529_add-modelsBase.resx">
-      <DependentUpon>201702281734529_add-modelsBase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703041323235_initDB.resx">
+      <DependentUpon>201703041323235_initDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

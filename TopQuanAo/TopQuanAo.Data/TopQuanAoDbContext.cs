@@ -12,7 +12,7 @@ namespace TopQuanAo.Data
     public class TopQuanAoDbContext : IdentityDbContext<ApplicationUser>
     {
         public TopQuanAoDbContext()
-            : base("TopQuanAoConnection", throwIfV1Schema: false)
+            : base("TopQuanAoConnection")
         {
         }
 
@@ -48,7 +48,7 @@ namespace TopQuanAo.Data
 
         protected override void OnModelCreating(DbModelBuilder builder)
         {
-            builder.Entity<IdentityRole>().ToTable("ApplicationRoles");
+            builder.Entity<IdentityRole>().HasKey(i => i.Id).ToTable("ApplicationRoles");
             builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId }).ToTable("ApplicationUserRoles");
             builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId).ToTable("ApplicationUserLogins");
             builder.Entity<IdentityUserClaim>().HasKey(i => i.UserId).ToTable("ApplicationUserClaims");

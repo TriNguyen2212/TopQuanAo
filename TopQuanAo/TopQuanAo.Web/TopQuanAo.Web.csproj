@@ -56,6 +56,10 @@
       <HintPath>..\packages\Autofac.WebApi2.4.0.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -195,6 +199,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\ApplicationRoleController.cs" />
+    <Compile Include="Api\PostCategoryController.cs" />
+    <Compile Include="Api\ProductCategoryController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -204,7 +211,7 @@
     <Compile Include="Areas\Administrator\AdministratorAreaRegistration.cs" />
     <Compile Include="Areas\Administrator\Controllers\ApplicationRoleController.cs" />
     <Compile Include="Areas\Administrator\Controllers\AuthorizeController.cs" />
-    <Compile Include="Areas\Administrator\Controllers\CategoryController.cs" />
+    <Compile Include="Areas\Administrator\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Administrator\Controllers\HomeController.cs" />
     <Compile Include="Areas\Administrator\Controllers\ProductController.cs" />
     <Compile Include="Areas\Administrator\Controllers\ReflectionController.cs" />
@@ -213,9 +220,34 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Infratructure\Core\ApiControllerBase.cs" />
+    <Compile Include="Infratructure\Core\PaginationSet.cs" />
+    <Compile Include="Infratructure\NganLuongAPI\APICheckoutV3.cs" />
+    <Compile Include="Mappings\AutoMapperConfiguration.cs" />
+    <Compile Include="Models\ApplicationGroupViewModel.cs" />
+    <Compile Include="Models\ApplicationRoleViewModel.cs" />
+    <Compile Include="Models\ApplicationUserViewModel.cs" />
+    <Compile Include="Models\ContactDetailViewModel.cs" />
+    <Compile Include="Models\ExternalLoginListViewModel.cs" />
+    <Compile Include="Models\FeedbackViewModel.cs" />
+    <Compile Include="Models\FooterViewModel.cs" />
+    <Compile Include="Models\HomeViewModel.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\MenuGroupViewModel.cs" />
+    <Compile Include="Models\MenuViewModel.cs" />
+    <Compile Include="Models\OrderDetailViewModel.cs" />
+    <Compile Include="Models\OrderViewModel.cs" />
+    <Compile Include="Models\PageViewModel.cs" />
+    <Compile Include="Models\PostCategoryViewModel.cs" />
+    <Compile Include="Models\PostTagViewModel.cs" />
+    <Compile Include="Models\PostViewModel.cs" />
+    <Compile Include="Models\ProductCategoryViewModel.cs" />
+    <Compile Include="Models\ProductTagViewModel.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\ShoppingCartViewModel.cs" />
+    <Compile Include="Models\SlideViewModel.cs" />
+    <Compile Include="Models\TagViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Start\Startup.cs" />
   </ItemGroup>
@@ -3466,6 +3498,11 @@
     <Content Include="Areas\Administrator\assets\global\plugins\jcrop\js\jquery.Jcrop.min.js" />
     <Content Include="Areas\Administrator\assets\global\plugins\jcrop\js\jquery.min.js" />
     <Content Include="Areas\Administrator\assets\global\plugins\jcrop\MIT-LICENSE.txt" />
+    <Content Include="Areas\Administrator\assets\global\plugins\jqgrid\grid.locale-en.js" />
+    <Content Include="Areas\Administrator\assets\global\plugins\jqgrid\grid.locale-en.min.js" />
+    <Content Include="Areas\Administrator\assets\global\plugins\jqgrid\jquery.jqGrid.min.js" />
+    <Content Include="Areas\Administrator\assets\global\plugins\jqgrid\ui.jqgrid-bootstrap.css" />
+    <Content Include="Areas\Administrator\assets\global\plugins\jqgrid\ui.jqgrid.css" />
     <Content Include="Areas\Administrator\assets\global\plugins\jquery-bootpag\jquery.bootpag.js" />
     <Content Include="Areas\Administrator\assets\global\plugins\jquery-bootpag\jquery.bootpag.min.js" />
     <Content Include="Areas\Administrator\assets\global\plugins\jquery-bootpag\LICENSE.txt" />
@@ -4161,6 +4198,9 @@
     <Content Include="Areas\Administrator\assets\global\plugins\zoom\jquery.zoom.min.js" />
     <Content Include="Areas\Administrator\assets\global\scripts\datatable.js" />
     <Content Include="Areas\Administrator\assets\global\scripts\metronic.js" />
+    <Content Include="Areas\Administrator\ScriptPage\ApplicationRole.js" />
+    <Content Include="Areas\Administrator\ScriptPage\ApplicationUser.js" />
+    <Content Include="Areas\Administrator\ScriptPage\ProductCategory.js" />
     <Content Include="Areas\Administrator\ScriptPage\Shared\AlertConfirm.js" />
     <Content Include="Areas\Administrator\ScriptPage\Shared\CommonFactory.js" />
     <Content Include="Areas\Administrator\ScriptPage\Shared\HelpTree.js" />
@@ -4178,11 +4218,9 @@
     <Content Include="Areas\Administrator\Views\web.config" />
     <Content Include="Areas\Administrator\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Administrator\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\Administrator\Views\ApplicationRole\Index.cshtml" />
+    <Content Include="Areas\Administrator\Views\ApplicationRole\ApplicationRoleList.cshtml" />
     <Content Include="Areas\Administrator\Views\Product\Create.cshtml" />
     <Content Include="Areas\Administrator\Views\Product\List.cshtml" />
-    <Content Include="Areas\Administrator\Views\Category\Create.cshtml" />
-    <Content Include="Areas\Administrator\Views\Category\List.cshtml" />
     <Content Include="Areas\Administrator\Views\Home\Index.cshtml" />
     <Content Include="Areas\Administrator\Views\Home\NotPermission.cshtml" />
     <Content Include="Areas\Administrator\Views\SystemConfig\ListControllerName.cshtml" />
@@ -4441,6 +4479,12 @@
     <Content Include="Areas\Administrator\assets\global\plugins\typeahead\README.md" />
     <Content Include="Areas\Administrator\assets\global\plugins\uniform\css\uniform.default.scss" />
     <Content Include="Areas\Administrator\assets\global\plugins\uniform\README.md" />
+    <Content Include="Areas\Administrator\Views\ApplicationRole\ApplicationRoleCreate.cshtml" />
+    <Content Include="AppSettings.config" />
+    <Content Include="ConnectionStrings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Areas\Administrator\Views\ProductCategory\ProductCategoryList.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

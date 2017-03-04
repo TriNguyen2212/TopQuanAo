@@ -9,7 +9,11 @@ namespace TopQuanAo.Web.Areas.Administrator.Controllers
     public class ApplicationRoleController : Controller
     {
         // GET: Administrator/ApplicationRoles
-        public ActionResult Index()
+        public ActionResult ApplicationRoleList()
+        {
+            return View();
+        }
+        public ActionResult ApplicationRoleCreate()
         {
             return View();
         }
